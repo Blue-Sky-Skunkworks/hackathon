@@ -1,4 +1,6 @@
 (in-package :hackathon)
 
 (defun initialize ()
-  (format t "Welcome to Hackathon!~%"))
+  (story:initialize-story)
+  (story:story "hackathon")
+  (format t "Welcome to the Hackathon!~%"))

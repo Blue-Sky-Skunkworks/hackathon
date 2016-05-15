@@ -7,4 +7,6 @@
   :depends-on ("story")
   :components ((:static-file "hackathon.asd")
                (:file "package")
+               (:file "logo")
+               (:file "main")
                (:file "initialize")))
