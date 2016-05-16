@@ -5,7 +5,7 @@
                          :imports ("style")
                          :scripts (("hack.js" hack-js) ("logo.js" logo-js))
                          :package :hackathon
-                         :modules (:roboto :page :packery :polymer
+                         :modules (:roboto :page :packery :polymer :echo
                                    :iron-flex-layout :iron-icons
                                    :iron-icons-editor :iron-icons-communication :iron-icons-places :iron-icons-notification
                                    :iron-icons-social
@@ -76,7 +76,8 @@
 
 
     )
-  (script (when-ready (lambda () (setup-routing) (animate-logo)))))
+  (script
+    (when-ready (lambda () (setup-routing) (animate-logo)))))
 
 (in-package :story-js)
 

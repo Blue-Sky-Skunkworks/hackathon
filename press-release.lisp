@@ -170,5 +170,5 @@ interested parties please contact us at <a href=\"mailto:will@blueskystewardship
 ;; Sustainable Transportation, generous private donors, and a team of
 ;; volunteers.")
 
-                  )))))
+                  ))))
 

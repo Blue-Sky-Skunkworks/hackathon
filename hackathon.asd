@@ -4,7 +4,7 @@
   :author "unknown"
   :license "unknown"
   :serial t
-  :depends-on ("story")
+  :depends-on ("story" "story-module-polymer")
   :components ((:static-file "hackathon.asd")
                (:file "package")
                (:file "utility")
