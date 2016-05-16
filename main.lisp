@@ -12,7 +12,8 @@
                                    :paper-ripple :paper-button :paper-card :paper-header-panel :paper-toolbar
                                    :paper-icon-button
                                    :google-map)
-                         :page-args (:body-class "fullbleed layout vertical"))
+                         :page-args (:body-class "fullbleed layout vertical")
+                         :publish-directory (hackathon-file "build/"))
   (:style :is "custom-style" :include "iron-flex iron-flex-alignment iron-positioning")
   (animated-pages :id "pages" :class "flex" :style "padding:20px;"
     :entry-animation "fade-in-animation"
