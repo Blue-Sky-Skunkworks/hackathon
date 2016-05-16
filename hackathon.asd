@@ -12,5 +12,6 @@
                (:file "sponsors")
                (:file "press-release")
                (:file "schedule")
+               (:file "sharing")
                (:file "main")
                (:file "initialize")))
