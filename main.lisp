@@ -13,7 +13,8 @@
                                    :paper-icon-button
                                    :google-map)
                          :page-args (:body-class "fullbleed layout vertical")
-                         :publish-directory (hackathon-file "build/"))
+                         :publish-directory (hackathon-file "build/")
+                         :cname "missoulacivichackathon.org")
   (:style :is "custom-style" :include "iron-flex iron-flex-alignment iron-positioning")
   (animated-pages :id "pages" :class "flex" :style "padding:20px;"
     :entry-animation "fade-in-animation"
