@@ -149,30 +149,26 @@ grass-finished.")
                   (:h2 "About our local sponsors:")
 
                   (:p "Thanks to our local sponsors the "
-                      (iter (for els on '(("Washington Companies" "http://www.washcorp.com/")
-                                          ("Moonlight Kitchens" "http://moonlightkitchens.com/")
-                                          ("Nora McDougall-Collins Catering" "http://montanawebmaster.com/")
-                                          ("Blue Sky Stewardship" "http://blueskystewardship.org")
-                                          ("Montana Code School" "http://montanacodeschool.com/")
-                                          ("University of Montana" "http://www.umt.edu/" t)
-                                          ("Free Cycles" "http://www.freecycles.org")
-                                          ("Montana Institute for Sustainable Transportation" "http://www.strans.org/" t)))
-                        (htm
-                         (unless (cdr els) (str "and "))
-                         (when (third (car els)) (str "the "))
-                         (:a :target "_blank" :href (cadar els) (esc (caar els)))
-                         (when (cdr els) (str ", "))))
-                      ".")
+                      (iter (for els on *sponsors*)
+                        (destructuring-bind (name url &optional image grey) (car els)
+                          (htm
+                           (unless (cdr els) (str "and "))
+                                        ;; (when (third (car els)) (str "the "))
+                           (:a :target "_blank" :href url (esc name)))
+                          (when (cdr els) (str ", ")))))
+                  "."
 
                   (:p "Sponsorship opportunities are still available,
-interested parties please contact us at <a href=\"mailto:info@blueskystewardship.org\">info@blueskystewardship.org</a>.")
+interested parties please contact us at <a href=\"mailto:will@blueskystewardship.org\">will@blueskystewardship.org</a>."))
 
-                  (:h2 "About Blue Sky Stewardship:")
+;;                   (:h2 "About Blue Sky Stewardship:")
 
-                  (:p "<a target=\"_blank\" href=\"http://blueskystewardship.org\">Blue Sky Stewardship</a> is a local food non-profit focused on
-researching and demonstrating solutions to Missoula's food production,
-processing, distribution, and waste systems. Blue Sky Stewardship is
-supported by the High Stakes Foundation, the Montana Institute for
-Sustainable Transportation, generous private donors, and a team of
-volunteers."))))))
+;;                   (:p "<a target=\"_blank\" href=\"http://blueskystewardship.org\">Blue Sky Stewardship</a> is a local food non-profit focused on
+;; researching and demonstrating solutions to Missoula's food production,
+;; processing, distribution, and waste systems. Blue Sky Stewardship is
+;; supported by the High Stakes Foundation, the Montana Institute for
+;; Sustainable Transportation, generous private donors, and a team of
+;; volunteers.")
+
+                  )))))
 

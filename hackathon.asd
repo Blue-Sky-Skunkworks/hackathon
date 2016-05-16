@@ -9,6 +9,8 @@
                (:file "package")
                (:file "utility")
                (:file "logo")
+               (:file "sponsors")
                (:file "press-release")
+               (:file "schedule")
                (:file "main")
                (:file "initialize")))
