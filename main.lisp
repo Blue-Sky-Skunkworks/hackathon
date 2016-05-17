@@ -32,6 +32,7 @@
 
       (iter (for (name onclick icon text) in
                  `(("schedule" "page(\"/schedule\");" "date-range" "The Event Schedule")
+                   ("wiki" ,(ps (visit-wiki)) "editor:mode-edit" "The Hackathon Wiki")
                    ;; ("wiki" "page(\"/wiki/Home\");" "editor:mode-edit" "The Hackathon Wiki")
                    ;; ("participate" "page(\"/participate\");" "places:all-inclusive" "Participate from Anywhere")
                    ("sharing" "page(\"/sharing\");" ("places:airport-shuttle"
@@ -124,6 +125,9 @@
 
   (defun visit-url (url)
     ((@ window open) url "_blank"))
+
+  (defun visit-wiki ()
+    (visit-url "https://github.com/Blue-Sky-Skunkworks/missoula-civic-hackathon-notes/wiki"))
 
   (defun visit-email-list ()
     (visit-url "https://groups.google.com/forum/#!forum/blue-sky-skunkworks"))
