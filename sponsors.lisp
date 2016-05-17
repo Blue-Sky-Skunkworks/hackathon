@@ -52,6 +52,5 @@
                       (:div :class (concatenate 'string "card-content" (when grey " grey"))
                             (:a :target "_blank" :href url
                                 (if image
-                                    nil
-                                        ; (image :alt name :src (format nil "images/sponsors/~A.png" image))
+                                    (image :alt name :src (format nil "images/sponsors/~A.png" image))
                                     (esc name)))))))))))

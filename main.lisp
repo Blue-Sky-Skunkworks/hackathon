@@ -77,15 +77,22 @@
 
     )
   (script
-    (when-ready (lambda () (setup-routing) (animate-logo)))))
+    (when-ready (lambda ()
+                  (setup-routing)
+                  (dolist (panel '("sponsors-panel")) (echo-watch-scrolling panel))
+                  (animate-logo)
+                  ))))
 
 (in-package :story-js)
 
 (define-script hack-js
+
   (defun select-page (index)
     (let ((pages (id "pages")))
       (unless (=== (@ pages selected) index)
-        (setf (@ pages selected) index))))
+        (setf (@ pages selected) index)))
+    ((@ echo render)))
+
   (defun setup-routing ()
     (page "/" (lambda () (select-page 1) (pack "top-grid")))
     (page "/press-release" (lambda () (select-page 2)))
