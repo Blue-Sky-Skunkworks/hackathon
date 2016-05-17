@@ -16,5 +16,6 @@
                (:file "code-of-conduct")
                (:file "time")
                (:file "government")
+               (:file "school")
                (:file "main")
                (:file "initialize")))

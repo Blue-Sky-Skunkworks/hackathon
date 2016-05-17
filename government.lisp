@@ -24,8 +24,10 @@
                                         (when additional (funcall additional stream))))))))))
 
 (defun render-tester-button (stream)
-  (button :onclick (ps (view-testers-message)) "Read the Senator's Message")
-  (script
-    (defun view-testers-message ()
-      (visit-url "/documents/Senator-Tester-Spring-2016-Hackathon-Message.pdf"))))
+  (button :onclick (ps (view-testers-message)) "Read the Senator's Message"))
 
+(in-package :story-js)
+
+(define-script government
+  (defun view-testers-message ()
+    (visit-url "/documents/Senator-Tester-Spring-2016-Hackathon-Message.pdf")))

@@ -43,7 +43,7 @@
                    ("conduct" "page(\"/code-of-conduct\");" "gavel" "Code of Conduct")
                    ;; ("prayer" "page(\"/prayer\");" "flag" "Prayer Flags")
                    ("time" "page(\"/time\");" "hourglass-empty" "The Time")
-                   ;; ("school" "page(\"/school\");" "social:school" "Hackathon Programming School")
+                   ("school" "page(\"/school\");" "social:school" "Hackathon Programming School")
                    ;; ("media" "page(\"/media\");" "visibility" "Media Coverage")
                    ("source-code" ,(ps (visit-source-code)) "code" "Code For This Site")
                    ))
@@ -71,7 +71,7 @@
     (animatable (render-code-of-conduct stream))
     (animatable (render-time stream))
     (animatable (render-government stream))
-    ;; (animatable (render-school stream))
+    (animatable (render-school stream))
     ;; (animatable (render-media stream))
 
     ;; (animatable (render-prayer stream))
@@ -89,12 +89,15 @@
   (comment (ascii-text "Welcome to Hackathon!" :font "emboss2") :indent 4))
 
 (defun hackathon-footer (stream)
-  (comment (format nil "~%~%~A~%~%" (ascii-text ">>>> Hack Me! <<<<" :font "pagga")) :indent 4))
+  (comment (ascii-text ">>>> Hack Me! <<<<" :font "pagga") :indent 4))
 
 
 (in-package :story-js)
 
-(define-script hack-js
+(defun hack-js ()
+  (concatenate 'string (main) (government)))
+
+(define-script main
 
   (defun select-page (index)
     (let ((pages (id "pages")))
@@ -111,9 +114,9 @@
     (page "/code-of-conduct" (lambda () (select-page 6)))
     (page "/time" (lambda () (select-page 7)))
     (page "/government" (lambda () (select-page 8) (pack "government" :gutter 60)))
+    (page "/school" (lambda () (select-page 9)))
     ;; (page "/participate" (lambda () (select-page 7)))
     ;; (page "/prayer" (lambda () (select-page 8)))
-    ;; (page "/school" (lambda () (select-page 11)))
     ;; (page "/media" (lambda () (select-page 12) (pack "medias" :gutter 60)))
     ;; (page "/wiki/:page" (lambda (ctx) (ensure-loaded :marked (select-page 13) (setup-wiki (@ ctx params page)))))
     ;; (page "/wiki" (lambda () (page "/wiki/Home")))
@@ -130,7 +133,5 @@
 
   (defun visit-source-code ()
     (visit-url "https://github.com/Blue-Sky-Skunkworks/hackathon"))
-
-
 
   )
