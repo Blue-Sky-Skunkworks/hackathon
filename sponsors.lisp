@@ -35,22 +35,21 @@
     ("Montana Institute for Sustainable Transportation" "http://www.strans.org/" "MIST")))
 
 (defun render-sponsors (stream)
-  (html
-    (header-panel :mode "seamed" :id "sponsors-panel"
-      (toolbar :class "sponsors"
-        (:span :style "margin-left:0px;" :class "title" "Missoula Civic Hackathon Sponsors")
-        (icon-button :class "toolbar-icon" :style "margin-left:0px;" :icon "arrow-back" :onclick "page(\"/\");"))
-      (:div :style "padding:20px;" :class "layout vertical"
-            (:h1 :style "margin-bottom:0px;" "Thanks to all of the Missoula Civic Hackathon's sponsors")
-            (:h4 :style "margin-top:5px;" "Sonsorship opportunities are still "
-                 (:a :href "mailto:will@blueskystewardship.org" "available") ".")
-            (vertical-break "30px")
-            (:div :id "sponsors" :style "padding:10px 60px 10px 60px;"
-                  (iter (for index from 0)
-                    (for (name url image grey) in *sponsors*)
-                    (card :class "pack" :id (format nil "card-~A" index)
-                      (:div :class (concatenate 'string "card-content" (when grey " grey"))
-                            (:a :target "_blank" :href url
-                                (if image
-                                    (image :alt name :src (format nil "images/sponsors/~A.png" image))
-                                    (esc name)))))))))))
+  (header-panel :mode "seamed" :id "sponsors-panel"
+    (toolbar :class "sponsors"
+      (:span :style "margin-left:0px;" :class "title" "Missoula Civic Hackathon Sponsors")
+      (icon-button :class "toolbar-icon" :style "margin-left:0px;" :icon "arrow-back" :onclick "page(\"/\");"))
+    (:div :style "padding:20px;" :class "layout vertical"
+          (:h1 :style "margin-bottom:0px;" "Thanks to all of the Missoula Civic Hackathon's sponsors")
+          (:h4 :style "margin-top:5px;" "Sonsorship opportunities are still "
+               (:a :href "mailto:will@blueskystewardship.org" "available") ".")
+          (vertical-break "30px")
+          (:div :id "sponsors" :style "padding:10px 60px 10px 60px;"
+                (iter (for index from 0)
+                  (for (name url image grey) in *sponsors*)
+                  (card :class "pack" :id (format nil "card-~A" index)
+                    (:div :class (concatenate 'string "card-content" (when grey " grey"))
+                          (:a :target "_blank" :href url
+                              (if image
+                                  (image :alt name :src (format nil "images/sponsors/~A.png" image))
+                                  (esc name))))))))))
