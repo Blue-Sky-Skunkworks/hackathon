@@ -18,5 +18,6 @@
                (:file "government")
                (:file "school")
                (:file "media")
+               (:file "prayer")
                (:file "main")
                (:file "initialize")))

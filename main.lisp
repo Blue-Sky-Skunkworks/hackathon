@@ -22,7 +22,7 @@
     :entry-animation "fade-in-animation"
     :exit-animation "fade-out-animation"
     :selected 0
-    (animatable) ; initial loading shows and transitions to next
+    (animatable)       ; initial loading shows and transitions to next
     (animatable :id "top-grid"
       (card :elevation 5 :class "pack press-release" :style "cursor:pointer;" :onclick "page(\"/press-release\")"
         (:div :class "card-content layout vertical center" :style "padding:30px;"
@@ -42,7 +42,7 @@
                    ("sponsors" "page(\"/sponsors\");" "card-giftcard" "Our Sponsors")
                    ("government" "page(\"/government\");" "social:location-city" "Friends in Government")
                    ("conduct" "page(\"/code-of-conduct\");" "gavel" "Code of Conduct")
-                   ;; ("prayer" "page(\"/prayer\");" "flag" "Prayer Flags")
+                   ("prayer" "page(\"/prayer\");" "flag" "Prayer Flags")
                    ("time" "page(\"/time\");" "hourglass-empty" "The Time")
                    ("school" "page(\"/school\");" "social:school" "Hackathon Programming School")
                    ("media" "page(\"/media\");" "visibility" "Media Coverage")
@@ -74,15 +74,14 @@
     (animatable (render-government stream))
     (animatable (render-school stream))
     (animatable (render-media stream))
-
-    ;; (animatable (render-prayer stream))
+    (animatable (render-prayer stream))
     ;; (animatable (render-participate stream))
 
     )
   (script
     (when-ready (lambda ()
                   (setup-routing)
-                  (dolist (panel '("sponsors-panel")) (echo-watch-scrolling panel))
+                  (dolist (panel '("sponsors-panel" "prayer-panel")) (echo-watch-scrolling panel))
                   (animate-logo)
                   ))))
 
@@ -117,8 +116,8 @@
     (page "/government" (lambda () (select-page 8) (pack "government" :gutter 60)))
     (page "/school" (lambda () (select-page 9)))
     (page "/media" (lambda () (select-page 10) (pack "medias" :gutter 60)))
+    (page "/prayer" (lambda () (select-page 11)))
     ;; (page "/participate" (lambda () (select-page 7)))
-    ;; (page "/prayer" (lambda () (select-page 8)))
     ;; (page "/wiki/:page" (lambda (ctx) (ensure-loaded :marked (select-page 13) (setup-wiki (@ ctx params page)))))
     ;; (page "/wiki" (lambda () (page "/wiki/Home")))
     (page (create :hashbang t)))
