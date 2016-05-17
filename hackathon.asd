@@ -13,5 +13,6 @@
                (:file "press-release")
                (:file "schedule")
                (:file "sharing")
+               (:file "code-of-conduct")
                (:file "main")
                (:file "initialize")))
