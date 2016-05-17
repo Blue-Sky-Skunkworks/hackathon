@@ -123,7 +123,7 @@
     ((@ window open) url "_blank"))
 
   (defun visit-email-list ()
-    (visit-url "https://groups.google.com/forum/#!forum/missoula-civic-hackathon"))
+    (visit-url "https://groups.google.com/forum/#!forum/blue-sky-skunkworks"))
 
   (defun join-school ()
     (visit-url "https://groups.google.com/forum/#!forum/missoula-civic-hackathon-students"))
