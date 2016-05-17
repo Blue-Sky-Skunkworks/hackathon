@@ -14,7 +14,9 @@
                                            :google-map)
                          :page-args (:body-class "fullbleed layout vertical")
                          :publish-directory (hackathon-file "build/")
-                         :cname "missoulacivichackathon.org")
+                         :cname "missoulacivichackathon.org"
+                         :header hackathon-header
+                         :footer hackathon-footer)
   (:style :is "custom-style" :include "iron-flex iron-flex-alignment iron-positioning")
   (animated-pages :id "pages" :class "flex" :style "padding:20px;"
     :entry-animation "fade-in-animation"
@@ -82,6 +84,13 @@
                   (dolist (panel '("sponsors-panel")) (echo-watch-scrolling panel))
                   (animate-logo)
                   ))))
+
+(defun hackathon-header (stream)
+  (comment (ascii-text "Welcome to Hackathon!" :font "emboss2") :indent 4))
+
+(defun hackathon-footer (stream)
+  (comment (format nil "~%~%~A~%~%" (ascii-text ">>>> Hack Me! <<<<" :font "pagga")) :indent 4))
+
 
 (in-package :story-js)
 
