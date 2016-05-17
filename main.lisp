@@ -44,7 +44,7 @@
                    ;; ("prayer" "page(\"/prayer\");" "flag" "Prayer Flags")
                    ("time" "page(\"/time\");" "hourglass-empty" "The Time")
                    ("school" "page(\"/school\");" "social:school" "Hackathon Programming School")
-                   ;; ("media" "page(\"/media\");" "visibility" "Media Coverage")
+                   ("media" "page(\"/media\");" "visibility" "Media Coverage")
                    ("source-code" ,(ps (visit-source-code)) "code" "Code For This Site")
                    ))
         (card :class "pack"
@@ -72,7 +72,7 @@
     (animatable (render-time stream))
     (animatable (render-government stream))
     (animatable (render-school stream))
-    ;; (animatable (render-media stream))
+    (animatable (render-media stream))
 
     ;; (animatable (render-prayer stream))
     ;; (animatable (render-participate stream))
@@ -115,9 +115,9 @@
     (page "/time" (lambda () (select-page 7)))
     (page "/government" (lambda () (select-page 8) (pack "government" :gutter 60)))
     (page "/school" (lambda () (select-page 9)))
+    (page "/media" (lambda () (select-page 10) (pack "medias" :gutter 60)))
     ;; (page "/participate" (lambda () (select-page 7)))
     ;; (page "/prayer" (lambda () (select-page 8)))
-    ;; (page "/media" (lambda () (select-page 12) (pack "medias" :gutter 60)))
     ;; (page "/wiki/:page" (lambda (ctx) (ensure-loaded :marked (select-page 13) (setup-wiki (@ ctx params page)))))
     ;; (page "/wiki" (lambda () (page "/wiki/Home")))
     (page (create :hashbang t)))

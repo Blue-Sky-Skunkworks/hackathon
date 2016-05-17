@@ -17,5 +17,6 @@
                (:file "time")
                (:file "government")
                (:file "school")
+               (:file "media")
                (:file "main")
                (:file "initialize")))
