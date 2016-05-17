@@ -1,7 +1,7 @@
 (in-package :hackathon)
 
 (define-story hackathon (:title "Missoula Civic Hackathon"
-                         :directories ("images" "imports")
+                         :directories ("images" "imports" "documents")
                          :imports ("style")
                          :scripts (("hack.js" hack-js) ("logo.js" logo-js))
                          :package :hackathon
@@ -39,7 +39,7 @@
                               "Ride & Couch Sharing")
                    ("email-list" ,(ps (visit-email-list)) "communication:email" "Join the Email List")
                    ("sponsors" "page(\"/sponsors\");" "card-giftcard" "Our Sponsors")
-                   ;; ("government" "page(\"/government\");" "social:location-city" "Friends in Government")
+                   ("government" "page(\"/government\");" "social:location-city" "Friends in Government")
                    ("conduct" "page(\"/code-of-conduct\");" "gavel" "Code of Conduct")
                    ;; ("prayer" "page(\"/prayer\");" "flag" "Prayer Flags")
                    ("time" "page(\"/time\");" "hourglass-empty" "The Time")
@@ -70,7 +70,7 @@
     (animatable (render-sponsors stream))
     (animatable (render-code-of-conduct stream))
     (animatable (render-time stream))
-    ;; (animatable (render-government stream))
+    (animatable (render-government stream))
     ;; (animatable (render-school stream))
     ;; (animatable (render-media stream))
 
@@ -110,9 +110,9 @@
     (page "/sponsors" (lambda () (select-page 5) (pack "sponsors" :gutter 60)))
     (page "/code-of-conduct" (lambda () (select-page 6)))
     (page "/time" (lambda () (select-page 7)))
+    (page "/government" (lambda () (select-page 8) (pack "government" :gutter 60)))
     ;; (page "/participate" (lambda () (select-page 7)))
     ;; (page "/prayer" (lambda () (select-page 8)))
-    ;; (page "/government" (lambda () (select-page 10)))
     ;; (page "/school" (lambda () (select-page 11)))
     ;; (page "/media" (lambda () (select-page 12) (pack "medias" :gutter 60)))
     ;; (page "/wiki/:page" (lambda (ctx) (ensure-loaded :marked (select-page 13) (setup-wiki (@ ctx params page)))))

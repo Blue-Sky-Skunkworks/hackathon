@@ -15,5 +15,6 @@
                (:file "sharing")
                (:file "code-of-conduct")
                (:file "time")
+               (:file "government")
                (:file "main")
                (:file "initialize")))
