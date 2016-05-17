@@ -14,5 +14,6 @@
                (:file "schedule")
                (:file "sharing")
                (:file "code-of-conduct")
+               (:file "time")
                (:file "main")
                (:file "initialize")))
