@@ -60,10 +60,7 @@
                                        (when (cdr els) (str "&nbsp;&nbsp;"))))))
                          (t (icon :class "big" :icon icon)))
                        (vertical-break)
-                       (esc text))))))
-
-
-      )
+                       (esc text)))))))
 
     (animatable (render-press-release stream))
     (animatable (render-schedule stream))

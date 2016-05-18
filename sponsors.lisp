@@ -1,14 +1,21 @@
 (in-package :hackathon)
 
 (defparameter *sponsors*
-  '(("Phyllis J. Washington College of Education & Human Sciences" "http://www.coehs.umt.edu/" "PJWEC")
+  '(
+    ;; Local to Missoula
+    ("Phyllis J. Washington College of Education & Human Sciences" "http://www.coehs.umt.edu/" "PJWEC")
     ("Montana Code School" "http://montanacodeschool.com/" "MCS")
     ("Free Cycles" "http://www.freecycles.org" "FC")
+    ("Blue Sky Stewardship" "http://blueskystewardship.org" "BSS")
     ("The University of Montana" "http://www.umt.edu/" "UM" t)
     ("Re: Industries" "http://www.reindustries.org/" "RI")
     ("Montana Institute for Sustainable Transportation" "http://www.strans.org/" "MIST")
     ("Geodata Services Inc." "http://www.geodataservicesinc.com/" "GD")
+    ("Butterfly Herbs" "http://www.butterflyherbs.com/" "BH")
+
+    ;; Remote
     ("ESRI" "http://esri.com/" "ESRI")
+    ("Microsoft BizSpark" "https://www.microsoft.com/bizspark/" "MS")
     ("OpenDataSoft" "http://opendatasoft.com/" "ODS")
     ("Code for America" "https://www.codeforamerica.org/brigade/Missoula-Civic-Hackathon/" "CFA")))
 
@@ -35,6 +42,7 @@
     ("Montana Institute for Sustainable Transportation" "http://www.strans.org/" "MIST")))
 
 (defun render-sponsors (stream)
+  (comment (ascii-text "We love our sponsors!"))
   (header-panel :mode "seamed" :id "sponsors-panel"
     (toolbar :class "sponsors"
       (:span :style "margin-left:0px;" :class "title" "Missoula Civic Hackathon Sponsors")
