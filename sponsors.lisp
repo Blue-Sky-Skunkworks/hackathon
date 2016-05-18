@@ -42,9 +42,9 @@
     ("Montana Institute for Sustainable Transportation" "http://www.strans.org/" "MIST")))
 
 (defun render-sponsors (stream)
-  (comment (format nil "~%~%~A~%~%~A~%" (ascii-text "We love our sponsors!")
-                   (aa:indent-paragraph
-                    (aa:word-wrap
+  (comment (format nil "~%~%~A~%~%~A~%" (aa:text "We love our sponsors!")
+                   (indent-text
+                    (word-wrap
                      (format nil "    We could not be pulling this hack ~
   off in such grace and style without all of the support that we ~
   have received, are receiving, and hope to continue to receive from ~
