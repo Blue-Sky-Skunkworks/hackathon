@@ -6,4 +6,6 @@
 (defun hackathon-file (&optional  base)
   (concatenate 'string (asdf-base-path :hackathon) base))
 
+(defun last1 (list)
+  (car (last list)))
 
