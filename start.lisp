@@ -95,7 +95,7 @@
   (defun list-depends-on (system)
     (cdr (assoc 'asdf:load-op (asdf:component-depends-on 'asdf:prepare-op (asdf:find-system system)))))
 
-  (defparameter *excluded-libraries* '())
+  (defparameter *excluded-libraries* '(:story :story-module-polymer :cl-ascii-art))
 
   (defun support-libraries (systems)
     (loop for system in systems
