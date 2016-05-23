@@ -6,4 +6,4 @@
   (story:initialize-story)
   (story:story "hackathon")
   (format t "Welcome to Hackathon!~%")
-  (format t "~%~A~%" (cl-ansi-text:blue (art:text "Hackathon!" :font "standard"))))
+  (format t "~%~A~%" (blue (text "Hackathon!" :font "standard"))))
