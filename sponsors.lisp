@@ -42,16 +42,17 @@
     ("Montana Institute for Sustainable Transportation" "http://www.strans.org/" "MIST")))
 
 (defun render-sponsors (stream)
-  (comment (format nil "~%~%~A~%~%~A~%" (art:text "We love our sponsors!")
-                   (indent-text
-                    (word-wrap
-                     (format nil "    We could not be pulling this hack ~
+  (comment (format nil "~%~%~A~%~A~%" (as-string (text "We love our sponsors!" :font "santaclara" :full-width t :width 100))
+                   (as-string
+                     (indent-text
+                      (word-wrap
+                       (format nil "    We could not be pulling this hack ~
   off in such grace and style without all of the support that we ~
   have received, are receiving, and hope to continue to receive from ~
   the ~{~A~^, ~} and ~A."
-                             (mapcar 'car (butlast *sponsors*)) (car (last1 *sponsors*)))
-                     40)
-                    8)) :indent 8)
+                              (mapcar 'car (butlast *sponsors*)) (car (last1 *sponsors*)))
+                      50)
+                     14))) :indent 8)
   (header-panel :mode "seamed" :id "sponsors-panel"
     (toolbar :class "sponsors"
       (:span :style "margin-left:0px;" :class "title" "Missoula Civic Hackathon Sponsors")

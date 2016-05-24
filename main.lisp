@@ -83,10 +83,10 @@
                   ))))
 
 (defun hackathon-header (stream)
-  (comment (art:text "Welcome to Hackathon!" :font "emboss2")))
+  (comment (as-string (text "Welcome to Hackathon!" :font "emboss2"))))
 
 (defun hackathon-footer (stream)
-  (comment (art:text ">>>> Hack Me! <<<<" :font "pagga")))
+  (comment (as-string (text ">>>> Hack Me! <<<<" :font "pagga"))))
 
 (in-package :story-js)
 
