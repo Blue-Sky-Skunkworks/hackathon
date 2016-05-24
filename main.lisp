@@ -1,17 +1,17 @@
 (in-package :hackathon)
 
 (define-story hackathon (:title "Missoula Civic Hackathon"
-                         :directories ("images" "imports" "documents")
-                         :imports ("style")
+                         :directories ("images" "documents")
+                         :imports (("style" hack-style))
                          :scripts (("hack.js" hack-js) ("logo.js" logo-js))
                          :package :hackathon
                          :modules (:roboto :page :packery :polymer :echo
-                                   :iron-flex-layout :iron-icons
-                                   :iron-icons-editor :iron-icons-communication :iron-icons-places :iron-icons-notification
-                                   :iron-icons-social
-                                           :neon-animatable :neon-animated-pages :fade-in-animation :fade-out-animation
-                                           :paper-ripple :paper-button :paper-card :paper-header-panel :paper-toolbar :paper-icon-button
-                                           :google-map)
+                                           :iron-flex-layout :iron-icons
+                                           :iron-icons-editor :iron-icons-communication :iron-icons-places :iron-icons-notification
+                                           :iron-icons-social
+                                   :neon-animatable :neon-animated-pages :fade-in-animation :fade-out-animation
+                                   :paper-ripple :paper-button :paper-card :paper-header-panel :paper-toolbar :paper-icon-button
+                                   :google-map)
                          :page-args (:body-class "fullbleed layout vertical")
                          :publish-directory (hackathon-file "build/")
                          :cname "missoulacivichackathon.org"

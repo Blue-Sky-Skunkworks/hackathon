@@ -8,6 +8,7 @@
   :components ((:static-file "hackathon.asd")
                (:file "package")
                (:file "utility")
+               (:file "style")
                (:file "logo")
                (:file "sponsors")
                (:file "press-release")
