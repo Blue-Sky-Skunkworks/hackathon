@@ -95,7 +95,7 @@
   (defun list-depends-on (system)
     (cdr (assoc 'asdf:load-op (asdf:component-depends-on 'asdf:prepare-op (asdf:find-system system)))))
 
-  (defparameter *excluded-libraries* '(:story :story-module-polymer :cl-ascii-art))
+  (defparameter *excluded-libraries* '(:story :story-modules :story-module-polymer :cl-ascii-art))
 
   (defun support-libraries (systems)
     (loop for system in systems
@@ -115,8 +115,9 @@
               current-library)
           (handler-case
               (dolist (m (support-libraries (cons *project* *excluded-libraries*)))
-                (unless (member m *excluded-libraries*)
+                (unless (member m *excluded-libraries* :test 'string-equal)
                   (setf current-library m)
+                  (format *original-standard-output* "~%Loading ~A " m)
                   (require m)))
             (error (c)
               (format *original-standard-output*
