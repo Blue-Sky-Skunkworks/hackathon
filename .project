@@ -1,1 +1,1 @@
-(hackathon sbcl ("hackathon") "Welcome to Hackathon!" :PUZZLE-PIECE "blue")
+(hackathon sbcl ("hackathon") "Welcome to Hackathon!" #\PUZZLE-PIECE "blue")
