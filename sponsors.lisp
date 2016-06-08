@@ -4,16 +4,19 @@
   '(
     ;; Local to Missoula
     ("Phyllis J. Washington College of Education & Human Sciences" "http://www.coehs.umt.edu/" "PJWEC")
-    ("Montana Code School" "http://montanacodeschool.com/" "MCS")
     ("Free Cycles" "http://www.freecycles.org" "FC")
     ("Blue Sky Stewardship" "http://blueskystewardship.org" "BSS")
     ("The University of Montana" "http://www.umt.edu/" "UM" t)
     ("Re: Industries" "http://www.reindustries.org/" "RI")
     ("Montana Institute for Sustainable Transportation" "http://www.strans.org/" "MIST")
+    ("City Brew Coffee" "http://citybrew.com/" "CB")
     ("Geodata Services Inc." "http://www.geodataservicesinc.com/" "GD")
+    ("The Missoula Insectarium" "http://www.missoulabutterflyhouse.org/" "MI")
+    ("Fact & Fiction Books" "http://www.factandfictionbooks.com/" "FF")
     ("Butterfly Herbs" "http://www.butterflyherbs.com/" "BH")
 
     ;; Remote
+    ("The Sunlight Foundation" "http://sunlightfoundation.com/" "SF")
     ("ESRI" "http://esri.com/" "ESRI")
     ("Microsoft BizSpark" "https://www.microsoft.com/bizspark/" "MS")
     ("OpenDataSoft" "http://opendatasoft.com/" "ODS")
