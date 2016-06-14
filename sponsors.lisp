@@ -14,6 +14,7 @@
     ("The Missoula Insectarium" "http://www.missoulabutterflyhouse.org/" "MI")
     ("Fact & Fiction Books" "http://www.factandfictionbooks.com/" "FF")
     ("Shakespear & Co." "http://www.shakespeareandco.com/" "SS")
+    ("Opprotunity E-Cycling" "http://www.opportunityecycling.org" "EC")
     ("Butterfly Herbs" "http://www.butterflyherbs.com/" "BH")
 
     ;; Remote
