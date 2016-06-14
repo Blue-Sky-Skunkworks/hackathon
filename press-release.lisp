@@ -35,12 +35,12 @@ to Build Solutions to Civic Problems")
                 (:h2 "What's happening and who's it for?")
 
                 (:p "Missoula is set to host its second Civic
-Hackathon from June 18 through the 19th, 2016. Civic Hackathons are
-events where developers, designers, artists, students, researchers,
-civic leaders, and citizens come together to share ideas, form teams,
-and work towards tangible solutions to the problems we all face daily
-in the towns we live. Local technical experts, professors and civic
-leaders will be on hand to coach teams.")
+Hackathon from June 18, 2016. Civic Hackathons are events where
+developers, designers, artists, students, researchers, civic leaders,
+and citizens come together to share ideas, form teams, and work
+towards tangible solutions to the problems we all face daily in the
+towns we live. Local technical experts, professors and civic leaders
+will be on hand to coach teams.")
 
                 (:p "“The opportunity to meet other developers and
 people with pressing civic problems and to work towards a common goal,
@@ -69,27 +69,25 @@ what leaders do.” - Robert E. Quinn")
 
                 (:h2 "How is it done?")
 
-                (:p "Beginning with a free and open to
-the public <a style=\"display:inline-block\" target=\"_blank\"
+                (:p "Carnival! Beginning with a free and open to the
+public <a style=\"display:inline-block\" target=\"_blank\"
 href=\"https://en.wikipedia.org/wiki/Open_Space_Technology\">open
-space technology</a> unconference on Saturday morning, citizens bring
-their best ideas and inspire others to join their projects. Over
-Saturday and Sunday teams focus on developing solutions, validating
-their ideas, and building a working prototype. On Sunday evening teams
-demo their prototypes and receive valuable feedback from a panel of
-experts.")
-
-                (:p "This is not a competition, but
-rather an opportunity to collaborate. People with relevant needed
-skills will be encouraged to help on multiple projects.")
+space technology</a> unconference on Saturday morning focused, this
+time, on Missoula's Electronic Waste, citizens bring their best ideas
+and inspire others to join their projects. After lunch, the “Hackathon
+Carnival” beings with a myriad of activities. Many teams focus on
+developing solutions, validating their ideas, and building a working
+prototype, while others will share skills in short tutorials and
+others will create art and others will communicate with people around
+the world. Its open ended and we will be adding activities and prizes
+up until the event.")
 
                 (:h2 "When and where is it?")
 
                 (:p "The detailed Missoula Civic Hackathon Schedule
 can be found online at <a target=\"_blank\"
 href=\"http://missoulacivichackathon.org/#!/schedule\">http://missoulacivichackathon.org/</a>. The
-hours of the event are Saturday, June 18, 2016 from 8:30 a.m. through
-the night to 6:00 p.m Sunday, June 19.")
+hours of the event are Saturday, June 18, 2016 from 9:00 a.m. until Midnight. ")
 
                 (:p "It will be held on the University of Montana
 Campus at the")
@@ -126,12 +124,12 @@ href='http://www.codeforamerica.org/blog/2016/02/04/this-month-in-civictech-janu
 
                 (:h2 "How can I sign up?")
 
-                (:p "Interested parties can register at
-<a target=\"_blank\"
-href=\"http://missoulacivichackathon.org/\">http://missoulacivichackathon.org/</a>. The
-ticket cost of $15 includes breakfast, lunch, dinner, and a midnight
-snack on Saturday as well as breakfast and lunch on Sunday. Attendees
-will also receive exclusive Missoula Civic Hackathon perks.")
+                (:p "Interested parties should show up!
+
+If you do intend to attent the morning un-conference we do ask that
+you sign up on the Meetup page <a target=\"_blank\"
+href=\"http://www.meetup.com/Montana-Programmers/events/231091271/\">here</a>. The
+Attendees will also receive exclusive Missoula Civic Hackathon perks.")
 
                 (:h2 "How are we attempting to mitigate our ecological footprint?")
 

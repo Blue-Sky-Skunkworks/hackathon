@@ -133,4 +133,5 @@
   (defun visit-source-code ()
     (visit-url "https://github.com/Blue-Sky-Skunkworks/hackathon"))
 
-  )
+  (defun visit-tickets ()
+    (visit-url "http://www.meetup.com/Montana-Programmers/events/231091271/")))

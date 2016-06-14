@@ -11,30 +11,21 @@
 
                 (:h1 "Friday, June 17")
                 (:table :class "schedule" (:tr (:th "6:00 p.m. &ndash; 8:00 p.m.")
-                                               (:td "Social Gathering &mdash; Location TBD")))
+                                               (:td "Social Gathering &mdash; Free Cycles")))
                 (vertical-break)
                 (:h1 "Saturday, June 18")
                 (:table :class "schedule"
-                        (iter (for (time what sub) in '(("8:30 a.m." "Doors Open &mdash; Coffee, Tea and Snacks")
-                                                        ("9:00 a.m. &ndash; Noon" "Civic Hackathon Unconference" "(Free and Open to the Public!)")
-                                                        ("Noon &ndash; 1:00p.m." "Lunch")
-                                                        ("1:00 p.m. &ndash; 2:00 p.m." "Pitches and Team Forming")
-                                                        ("2:00 p.m." "The 24 hour clock starts")
-                                                        ("7:00 p.m." "Dinner")
-                                                        ("Midnight" "Coffee, Tea, and Snacks")))
+                        (iter (for (time what sub) in '(("9:00 a.m." "Doors Open &mdash; Coffee, Tea and Snacks")
+                                                        ("9:30 a.m." "Lightning Talks")
+                                                        ("10:30 a.m. &ndash; Noon" "Civic Hackathon Unconference" "(Free and Open to the Public!)")
+                                                        ("Noon &ndash; 1:00p.m." "Lunch (some food will be provided)")
+                                                        ("1:00 p.m. &ndash; 4:00 p.m." "Carnival!")
+                                                        ("4:00 p.m." "Demos and Prizes")
+                                                        ("5:00 p.m. &ndash; Midnight" "Worldwide Free Cycles Fundraiser")
+                                                        ("8:00 p.m. &ndash; 10 p.m." "CryptoParty")))
                           (htm (:tr (:th (str time)) (:td
                                                       (if sub
                                                           (button :onclick (ps (visit-tickets)) :class "free-ticket layout vertical center"
                                                             (:span (str what))
                                                             (:span (str sub)))
-                                                          (str what)))))))
-
-                (vertical-break)
-                (:h1 "Sunday, June 19")
-                (:table :class "schedule"
-                        (iter (for (time what) in '(("8:00 a.m." "Breakfast")
-                                                    ("Noon" "Lunch")
-                                                    ("3:00 p.m." "Last commit")
-                                                    ("3:30 p.m. &ndash; 4:30 p.m." "Team Presentations")
-                                                    ("4:30 p.m. &ndash; 5:00 p.m." "Voting and Awards")))
-                          (htm (:tr (:th (str time)) (:td (str what))))))))))
+                                                          (str what)))))))))))
