@@ -13,6 +13,7 @@
     ("Geodata Services Inc." "http://www.geodataservicesinc.com/" "GD")
     ("The Missoula Insectarium" "http://www.missoulabutterflyhouse.org/" "MI")
     ("Fact & Fiction Books" "http://www.factandfictionbooks.com/" "FF")
+    ("Shakespear & Co." "http://www.shakespeareandco.com/" "SS")
     ("Butterfly Herbs" "http://www.butterflyherbs.com/" "BH")
 
     ;; Remote
