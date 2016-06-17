@@ -14,6 +14,8 @@
     ("The Missoula Insectarium" "http://www.missoulabutterflyhouse.org/" "MI")
     ("Fact & Fiction Books" "http://www.factandfictionbooks.com/" "FF")
     ("Shakespear & Co." "http://www.shakespeareandco.com/" "SS")
+    ("Bird's Nest Books" "https://www.facebook.com/pages/The-Birds-Nest/100892259956068" "BB")
+    ("Orange Street Food Farm" "http://www.orangestreetfoodfarm.com/" "OS")
     ("Opprotunity E-Cycling" "http://www.opportunityecycling.org" "EC")
     ("Butterfly Herbs" "http://www.butterflyherbs.com/" "BH")
 
