@@ -1,5 +1,6 @@
 (in-package :hackathon)
 
+
 (defun render-logo (stream)
   (html
     (:div :class "layout vertical center" :style "padding:40px;"
