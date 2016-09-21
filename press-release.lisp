@@ -1,6 +1,6 @@
 (in-package :hackathon)
 
-(defparameter *venue* '(46.8625418 -113.9848200))
+(defparameter *venue* '(46.8596418 -113.9864400))
 
 (defun render-press-release (stream)
   (header-panel :mode "seamed"
@@ -12,29 +12,28 @@
                 (:h1 "FOR IMMEDIATE RELEASE")
                 (:table
                  (:tr (:td :style "padding-right:20px;" "Event Name:") (:td "Missoula Civic Hackathon"))
-                 (:tr (:td :style "padding-right:20px;" "Event Dates:") (:td "June 18-19, 2016"))
+                 (:tr (:td :style "padding-right:20px;" "Event Dates:") (:td "September 24, 2016"))
                  (:tr (:td :style "padding-right:20px;vertical-align:top;" "Event Location:")
                       (:td
-                       "Phyllis J. Washington Education Center" (:br)
-                       "32 Campus Drive" (:br)
+                       "The Payne Family Native American Center" (:br)
                        "University of Montana" (:br)
                        "Missoula, Montana 59812"))
                  (:tr (:td :style "padding-right:20px;" "Contact:") (:td "William Halliburton, Co-Organizer"))
-                 (:tr (:td :style "padding-right:20px;" "Phone Number:") (:td "(406) 830-5031"))
+                 (:tr (:td :style "padding-right:20px;" "Phone Number:") (:td "(404) 832-5307"))
                  (:tr (:td :style "padding-right:20px;" "E-mail Address:")
-                      (:td "<a href=\\\"mailto:will@blueskystewardship.org\\\">will@blueskystewardship.org</a>"))
+                      (:td "<a href=\\\"mailto:whalliburton@gmail.com\\\">whalliburton@gmail.com</a>"))
                  (:tr (:td :style "padding-right:20px;" "Website Address:")
                       (:td "<a target=\"_blank\" href=\"http://missoulacivichackathon.org\">http://missoulacivichackathon.org</a>")))
 
                 (:br)
                 (:h1 "Missoula Civic Hackathon Hosts Area Technical Developers and Citizens
-to Build Solutions to Civic Problems")
+to Build Solutions to the Standing Rock's  Civic Problems")
 
                 (:h1 "MISSOULA, MT")
 
                 (:h2 "What's happening and who's it for?")
 
-                (:p "Missoula is set to host its second Civic
+                (:p "Missoula is set to host its third Civic
 Hackathon from June 18, 2016. Civic Hackathons are events where
 developers, designers, artists, students, researchers, civic leaders,
 and citizens come together to share ideas, form teams, and work
@@ -92,12 +91,12 @@ hours of the event are Saturday, June 18, 2016 from 9:00 a.m. until Midnight. ")
                 (:p "It will be held on the University of Montana
 Campus at the")
                 (:div :class "layout vertical center"
-                      (:span :class "location" :onclick "setMapZoom(18);" "Phillis J. Washington Education Center")
-                      (:span :class "location" :onclick "setMapZoom(15);" "32 Campus Drive")
+                      (:span :class "location" :onclick "setMapZoom(18);" "The Payne Family Native American Center")
+                      ;; (:span :class "location" :onclick "setMapZoom(15);" "32 Campus Drive")
                       (:span (:span :class "location" :onclick "setMapZoom(12);" "Missoula, ")
                              (:span :class "location" :onclick "setMapZoom(5);" "Montana 59812."))
                       (vertical-break)
-                      (google-map :id "map" :style "height:300px;width:500px;" :latitude (car *venue*) :longitude (cadr *venue*) :zoom 14
+                      (google-map :id "map" :style "height:300px;width:500px;" :latitude (car *venue*) :longitude (cadr *venue*) :zoom 18
                         (map-marker :latitude (car *venue*) :longitude (cadr *venue*)
                           :icon "images/map-icon.png"
                           :title "Missoula Civic Hackathon")))
@@ -111,7 +110,7 @@ hence faced by a vast number communities all over the world.")
                 (:p "Issues such as sustainability, loss
 of fertile land, desertification, pollution, disenfranchisement, local
 financing, food production, energy, transportation, city planning,
-urban forest decline, crime, water, preservation of species, land
+urban forest decline, crime," (:b "clean water") ", preservation of species, land
 management, “waste”, climate change, and housing being just a few
 examples of what is in the minds and hearts of many citizens.")
 
@@ -119,17 +118,11 @@ examples of what is in the minds and hearts of many citizens.")
 
                 "Hackathons <a target='_blank'
 href='http://devpost.com/hackathons'>around the world</a> are busy
-working toward better communities. Read <a target='_blank'
-href='http://www.codeforamerica.org/blog/2016/02/04/this-month-in-civictech-january-hacking/'>This Month in #CivicTech: January Hacking</a>. "
+working toward better communities."
 
                 (:h2 "How can I sign up?")
 
-                (:p "Interested parties should show up!
-
-If you do intend to attent the morning un-conference we do ask that
-you sign up on the Meetup page <a target=\"_blank\"
-href=\"http://www.meetup.com/Montana-Programmers/events/231091271/\">here</a>. The
-Attendees will also receive exclusive Missoula Civic Hackathon perks.")
+                (:p "Interested parties should show up!")
 
                 (:h2 "How are we attempting to mitigate our ecological footprint?")
 
@@ -153,19 +146,5 @@ grass-finished.")
                          ;; (when (third (car els)) (str "the "))
                          (:a :target "_blank" :href url (esc name)))
                         (when (cdr els) (str ", ")))))
-                "."
-
-                (:p "Sponsorship opportunities are still available,
-interested parties please contact us at <a href=\"mailto:will@blueskystewardship.org\">will@blueskystewardship.org</a>."))
-
-          ;;                   (:h2 "About Blue Sky Stewardship:")
-
-          ;;                   (:p "<a target=\"_blank\" href=\"http://blueskystewardship.org\">Blue Sky Stewardship</a> is a local food non-profit focused on
-          ;; researching and demonstrating solutions to Missoula's food production,
-          ;; processing, distribution, and waste systems. Blue Sky Stewardship is
-          ;; supported by the High Stakes Foundation, the Montana Institute for
-          ;; Sustainable Transportation, generous private donors, and a team of
-          ;; volunteers.")
-
-          )))
+                "."))))
 
