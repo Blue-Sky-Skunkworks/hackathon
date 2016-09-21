@@ -110,7 +110,7 @@ hence faced by a vast number communities all over the world.")
                 (:p "Issues such as sustainability, loss
 of fertile land, desertification, pollution, disenfranchisement, local
 financing, food production, energy, transportation, city planning,
-urban forest decline, crime," (:b "clean water") ", preservation of species, land
+urban forest decline, crime, " (:b "clean water") ", preservation of species, land
 management, “waste”, climate change, and housing being just a few
 examples of what is in the minds and hearts of many citizens.")
 
